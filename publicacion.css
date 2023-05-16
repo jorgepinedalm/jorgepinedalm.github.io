@@ -284,6 +284,7 @@ span.keywords__keyword {
   border: 1px solid #9caeb7;
   color: #435861;
   border-radius: 4px;
+  margin-bottom: .5rem;
 }
 
 .book-container {
