@@ -244,6 +244,7 @@
 .accordion-authors-list__author__info__icon{
   height: 32px;
   width: 32px;
+  min-width: 32px;
   border-radius: 50%;
   background-color: #dee2e6;
   margin-right: .5rem;

@@ -177,6 +177,7 @@
             </nav>
             <div class="row">
                 <div class="col-12 col-md-3">
+                    <div id="headings-mobile"></div>
                     <img
                             alt="The Outstanding Developer by Sebastien Castiel"
                             src="https://editorial.unimagdalena.edu.co/Content/PortadasEditorial/20210909163006-502.jpg"
@@ -332,6 +333,30 @@
                                 </p>
                             </div>
                           </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingFeatures">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFeatures" aria-expanded="false" aria-controls="collapseFeatures">
+                                Características
+                              </button>
+                            </h3>
+                            <div id="collapseFeatures" class="accordion-collapse collapse" aria-labelledby="headingFeatures" data-bs-parent="#accordionPublicacion">
+                              <div class="accordion-body">
+                                  ...
+                              </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingKeywords">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKeywords" aria-expanded="false" aria-controls="collapseKeywords">
+                                Palabras claves
+                              </button>
+                            </h3>
+                            <div id="collapseKeywords" class="accordion-collapse collapse" aria-labelledby="headingKeywords" data-bs-parent="#accordionPublicacion">
+                              <div class="accordion-body">
+                                  ...
+                              </div>
+                            </div>
                         </div>
                         <div class="accordion-item">
                           <h3 class="accordion-header" id="headingTable">
@@ -555,6 +580,9 @@
         }
     </script>
     <script>
+        /**
+         * Script calcular no. de autores visibles y controlar la visualización del boton ver todos.
+        */
         function countNonVisibleElements(container, isHorizontal) {
             const elements = container.children;
             const containerRect = container.getBoundingClientRect();
@@ -608,6 +636,32 @@
                 headingCollapse.scrollIntoView({ behavior: 'smooth', block: 'start' });
             })
         }
+    </script>
+    <script>
+        /**
+         * Script para ubicar el titulo de la publicación segun el tamaño de pantalla
+        */
+        function moverDOMElements(idTargetDiv, idSourceDiv){
+        
+            const targetDiv = document.getElementById(idTargetDiv);
+            const sourceDiv = document.getElementById(idSourceDiv);
+            while (sourceDiv.firstChild) {
+                targetDiv.appendChild(sourceDiv.firstChild);
+            }
+        }
+        function moveHeadings(){
+            if(window.innerWidth < 768){
+                moverDOMElements('headings-mobile', 'publicacion-headings');
+            }else{
+                moverDOMElements('publicacion-headings', 'headings-mobile');
+            }
+        }
+        console.log("width: ", window.innerWidth);
+        if(window.innerWidth < 768){
+            moverDOMElements('headings-mobile', 'publicacion-headings');
+        }
+        window.addEventListener('resize', moveHeadings);        
+        
     </script>
 </body>
 </html>
