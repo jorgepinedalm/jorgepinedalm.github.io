@@ -265,6 +265,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-7 col-xl-8">
                             <div class="publicacion__abstract">
+                                <small class="d-block mb-1 visually-hidden"><strong>Resumen</strong></small>
                                 <p>
                                     En 1989, Slobodan Milosevic, presidente de la Liga Comunista Yugoslava, implementó una reforma constitucional en la que privó del voto en el Congreso de la confederación a la república de Montenegro y a las provincias autónomas Kosovo y Vojvodina; en respuesta, las repúblicas de Eslovenia y Croacia se declararon independientes en 1991, seguidas de Macedonia y Bosnia-Herzegovina en 1992; el mismo año, en la provincia autónoma de Kosovo, los albanokosovares proclamaron la independencia y constituyeron un gobierno paralelo. Buscando mantener el control territorial por la fuerza, Milosevic emprendió campañas bélicas contra Eslovenia y Croacia en 1991, Bosnia-Herzegovina en 1992 y Kosovo en 1996, en las que se cometieron violaciones al Derecho Internacional Humanitario (DIH). Con el objetivo de enjuiciar a los responsables de las contravenciones al DIH en el territorio yugoslavo, la ONU instauró el Tribunal Penal Internacional para la antigua Yugoslavia (TPIY) en el año 1993. En el marco de las investigaciones del Tribunal, la antropología forense jugó un papel fundamental en la recolección de gran parte de las pruebas que fueron utilizadas para el enjuiciamiento de los implicados. Esta obra relata la disolución de la confederación yugoslava; da cuenta del origen y competencias del TPIY, y presenta una síntesis del trabajo antropológico-forense realizado por entre 1996 y 2002, enfatizando en tres operaciones forenses en las que el autor participó en el 2001.
                                 </p>
@@ -285,6 +286,12 @@
                                     <li>ASEUC <a href="#">Impreso  <span class="bi bi-box-arrow-up-right" aria-hidden="true"></span></a></li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                    <div class="keywords-summary">
+                        <small class="d-block mb-1"><strong>Palabras clave</strong></small>
+                        <div class="keywords">
+                            Antropología, Derecho Internacional Humanitario, Yugoslavia
                         </div>
                     </div>
                     
@@ -537,30 +544,6 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script>
-        $(document).ready(function(){
-          $('.bxslider').bxSlider({
-                auto: true,
-                autoControls: true,
-                adaptiveHeight: true,
-                speed: 500,
-                slideSelector: 'div.book',
-                minSlides: 1,
-                maxSlides: 5,
-                moveSlides: 1,
-                slideWidth: 200,
-                autoHover: true,
-                nextText: "Siguiente",
-                prevText: "Anterior",
-                startText: "Iniciar",
-                stopText: "Detener"
-            });
-        });
-        
-
-    </script>
-	
     <script src="https://cdn.unimagdalena.edu.co/code/js/main.min.js" async></script>
     <script src="https://cdn.unimagdalena.edu.co/code/js/updates.js" defer></script>
     <script type="text/javascript">
@@ -662,6 +645,17 @@
         }
         window.addEventListener('resize', moveHeadings);        
         
+    </script>
+    <script>
+        const keywords = document.getElementsByClassName("keywords");
+        for(const keywordWrapper of keywords){
+            //Se separan las palabras por comas y punto y comas
+            const keys = [...keywordWrapper.innerHTML.split(/[;,]\s*/)];
+            keywordWrapper.innerHTML = '';
+            for(const keyStr of keys){
+                keywordWrapper.innerHTML += "<span class='keywords__keyword'>"+keyStr+"</span>"
+            }
+        }
     </script>
 </body>
 </html>

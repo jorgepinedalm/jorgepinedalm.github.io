@@ -272,6 +272,20 @@
   box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
 }
 
+.keywords {
+  margin-bottom: 1rem;
+}
+
+.keywords .keywords__keyword:not(:last-child) {
+  margin-right: .5rem;
+}
+span.keywords__keyword {
+  padding: 2px 4px;
+  border: 1px solid #9caeb7;
+  color: #435861;
+  border-radius: 4px;
+}
+
 .book-container {
     display: flex;
     align-items: center;
