@@ -225,11 +225,12 @@
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFilters"
                         aria-labelledby="offcanvasFiltersLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasFiltersLabel">Categorías</h5>
+                            <h5 class="offcanvas-title" id="offcanvasFiltersLabel">Filtrar búsqueda</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                 aria-label="Cerrar"></button>
                         </div>
-                        <div class="offcanvas-body">
+                        <div class="offcanvas-body pt-0">
+                            <small class="d-block text-center mb-2">Los filtros seleccionados a continuación se aplicaran automáticamente en la búsqueda</small>
                             <div class="catalogo__filters__custom__fields">
                                 <div class="field-format">
                                     <div class="form-floating mb-3">
@@ -269,14 +270,14 @@
                                     </div>
 
                                 </div>
-                                <div class="accordion" id="accordionTopics">
+                                <div class="accordion mb-3" id="accordionTopics">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse1"
                                                 aria-expanded="true" aria-controls="collapse1">
                                                 Ciencias médicas y de salud <span
-                                                    class="badge text-bg-primary">19<span
+                                                    class="badge text-bg-primary" title="19 resultados">19<span
                                                         class="visually-hidden"> resultados</span></span>
                                             </button>
                                         </h2>
@@ -288,7 +289,7 @@
                                                         id="subtopic1">
                                                     <label class="form-check-label" for="subtopic1">
                                                         Enfermería <span
-                                                        class="badge text-bg-secondary">6<span
+                                                        class="badge text-bg-secondary" title="6 resultados">6<span
                                                             class="visually-hidden"> resultados</span></span>
                                                     </label>
                                                 </div>
@@ -297,7 +298,7 @@
                                                         id="subtopic2" checked>
                                                     <label class="form-check-label" for="subtopic2">
                                                         Medicina <span
-                                                        class="badge text-bg-secondary">11<span
+                                                        class="badge text-bg-secondary" title="11 resultados">11<span
                                                             class="visually-hidden"> resultados</span></span>
                                                     </label>
                                                 </div>
@@ -306,7 +307,7 @@
                                                         id="subtopic3" checked>
                                                     <label class="form-check-label" for="subtopic3">
                                                         Odontología <span
-                                                        class="badge text-bg-secondary">2<span
+                                                        class="badge text-bg-secondary" title="2 resultados">2<span
                                                             class="visually-hidden"> resultados</span></span>
                                                     </label>
                                                 </div>
@@ -318,7 +319,7 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse2"
                                                 aria-expanded="false" aria-controls="collapse2">
-                                                Ciencias Naturales <span class="badge text-bg-primary">27<span
+                                                Ciencias Naturales <span class="badge text-bg-primary" title="27 resultados">27<span
                                                         class="visually-hidden"> resultados</span></span>
                                             </button>
                                         </h2>
@@ -334,7 +335,7 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse3"
                                                 aria-expanded="false" aria-controls="collapse3">
-                                                Ciencias Sociales <span class="badge text-bg-primary">103<span
+                                                Ciencias Sociales <span class="badge text-bg-primary" title="103 resultados">103<span
                                                         class="visually-hidden"> resultados</span></span>
                                             </button>
                                         </h2>
@@ -350,7 +351,7 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse4"
                                                 aria-expanded="false" aria-controls="collapse4">
-                                                Ciencias Agrarias <span class="badge text-bg-primary">20<span
+                                                Ciencias Agrarias <span class="badge text-bg-primary" title="20 resultados">20<span
                                                         class="visually-hidden"> resultados</span></span>
                                             </button>
                                         </h2>
@@ -366,7 +367,7 @@
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse5"
                                                 aria-expanded="false" aria-controls="collapse5">
-                                                Humanidades y artes <span class="badge text-bg-primary">99<span
+                                                Humanidades y artes <span class="badge text-bg-primary" title="99 resultados">99<span
                                                         class="visually-hidden"> resultados</span></span>
                                             </button>
                                         </h2>
@@ -383,7 +384,7 @@
                                                 data-bs-toggle="collapse" data-bs-target="#collapse6"
                                                 aria-expanded="false" aria-controls="collapse6">
                                                 Ingeniería y tecnología <span
-                                                    class="badge text-bg-primary">23<span
+                                                    class="badge text-bg-primary" title="23 resultados">23<span
                                                         class="visually-hidden"> resultados</span></span>
                                             </button>
                                         </h2>
@@ -394,6 +395,11 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="button-clear-filter">
+                                        <span class="bi bi-x-circle" aria-hidden="true"></span> Limpiar filtros
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -558,7 +564,7 @@
                         </div>
                         <div class="card-data__bottom">
                             <div class="card-data__features">
-                                <img src="open-access.png" alt="Open access">
+                                <img src="open-access.png" title="Visualiza este libro sin ningún costo" alt="Visualiza este libro sin ningún costo">
                             </div>
                             <a href="#" class="button-view-more">
                                 Ver más
@@ -596,7 +602,7 @@
                         </div>
                         <div class="card-data__bottom">
                             <div class="card-data__features">
-                                <img src="open-access-u.png" alt="Open access">
+                                <img src="open-access-u.png" title="Si perteneces a la comunidad Unimagdalena, puedes visualizar este libro sin ningún costo" alt="Si perteneces a la comunidad Unimagdalena, puedes visualizar este libro sin ningún costo">
                             </div>
                             <a href="#" class="button-view-more">
                                 Ver más
@@ -645,7 +651,55 @@
                         </div>
                         <div class="card-data__bottom">
                             <div class="card-data__features">
-                                <img src="open-access.png" alt="Open access">
+                                <img src="open-access.png" title="Visualiza este libro sin ningún costo" alt="Visualiza este libro sin ningún costo">
+                            </div>
+                            <a href="#" class="button-view-more">
+                                Ver más
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-data">
+                    <div class="card-data__cover">
+                        <img src="https://editorial.unimagdalena.edu.co/Content/PortadasEditorial/20211217054712-018.jpg"
+                            alt="Portada de título">
+                    </div>
+                    <div class="card-data__body">
+                        <h3 class="card-data__body__title"><a href="#">Hechos, realidades y perspectivas de la minería de carbón en el Cesar y La Guajira</a>
+                        </h3>
+                        <div class="card-data__body__details">
+                            <div class="card-data__body__details__format">
+                                <span class="format">Impreso</span>
+                            </div>
+                            <div class="card-data__body__details__edition">
+                                Edición 1, 2021
+                            </div>
+                            <div class="card-data__body__details__topic">
+                                Ingeniería y tecnología
+                            </div>
+                        </div>
+                        <div class="card-data__body__authors">
+                            <strong class="me-1"><small>Autor(es): </small></strong>
+                            <ul class="card-data__body__authors__list">
+                                <li><a href="#">Felipe Alberto Corral Montoya</a></li>
+                                <li><a href="#">Rosa Santamaría Guerrero</a></li>
+                                <li><a href="#">Atalia Mejía</a></li>
+                                <li><a href="#">Yonatan Sánchez</a></li>
+                                <li><a href="#">Andrea Cardoso Díaz</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-data__body__authors">
+                            <strong class="me-1"><small>Editor(es): </small></strong>
+                            <ul class="card-data__body__authors__list">
+                                <li>Felipe Alberto Corral Montoya</li>
+                            </ul>
+                        </div>
+                        <div class="card-data__body__abstract with-editors">
+                            <p>En 2020, el sector de la minería de carbón a gran escala experimenta una situación compleja: la lucha contra la crisis climática obliga a pensar en el fin del uso y la extracción de combustibles fósiles, y las energías renovables ya ofrecen una alternativa más barata para la generación de electricidad. Entonces, haciendo un balance de un sector que puede estar experimentando su ocaso, ¿qué aporta o aportó carbón?, ¿qué costos le ha traído al país y a las comunidades afectadas en La Guajira y Cesar? Haciendo una exploración por 14 puntos de interés sobre la situación actual, los retos y las perspectivas futuras del sector, este libro trata de ofrecer una respuesta a esas preguntas. Mediante la investigación realizada desde universidades, las ONG y los centros de pensamiento, esta obra pone a disposición del público y de las comunidades hechos y argumentos de gran importancia para reflexionar, debatir y actuar sobre las transiciones justas que pueden desencadenarse con el declive y final de la extracción de carbón en La Guajira y Cesar.</p>
+                        </div>
+                        <div class="card-data__bottom">
+                            <div class="card-data__features">
+                                <img src="open-access.png" title="Visualiza este libro sin ningún costo" alt="Visualiza este libro sin ningún costo">
                             </div>
                             <a href="#" class="button-view-more">
                                 Ver más

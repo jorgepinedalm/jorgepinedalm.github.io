@@ -130,6 +130,21 @@
     color: white;
     border-color: #003a6b;
 }
+.button-clear-filter {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    border-radius: 8px;
+    border: 1px solid #003a6b;
+    background: inherit;
+    font-family: 'Intro', sans-serif;
+    font-weight: 700;
+    color: #003a6b;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+.button-clear-filter:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
 .data-list .card-data{
     display: flex;
     align-items: stretch;
@@ -245,10 +260,11 @@
 .card-data__body__authors__list li {
     display: inline-flex;
     align-items: center;
-    border: 1px solid #495057;
+    border: 1px solid #ced4da;
     border-radius: 6px;
     padding: .125rem 0.5rem;
     position: relative;
+    color: #495057;
 }
 .card-data__body__authors__list li a{
     color: #495057;
