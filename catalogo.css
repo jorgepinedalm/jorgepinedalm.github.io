@@ -151,6 +151,7 @@
     flex-direction: row;
     padding: .5rem;
     margin-bottom: 1rem;
+    background-color: white;
     border: 1px solid #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.15)!important;
@@ -299,6 +300,11 @@
     height: 28px;
     margin-right: .5rem;
 }
+.catalogo__data{
+    background-color: #f8f9fa;
+    padding: .25rem;
+    border-radius: 8px;
+}
 .catalogo__data.data-thumb {
     display: flex;
     flex-wrap: wrap;
@@ -311,6 +317,7 @@
     margin-right: .25rem;
     margin-bottom: 1rem;
     border: 1px solid #f8f9fa;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.15)!important;
     display: flex;
@@ -465,6 +472,9 @@
 }
 
 @media only screen and (min-width: 1440px) {
+    .catalogo__data{
+        padding: .5rem;
+    }
     .data-list .card-data__cover{
         width: 200px;
         min-width: 200px;
