@@ -1,0 +1,1 @@
+var app = angular.module("presentacionApp", ['rzModule', 'angularUtils.directives.dirPagination', 'checklist-model', 'public.editorial', 'editorialServices']);
