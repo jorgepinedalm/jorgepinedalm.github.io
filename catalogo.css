@@ -462,7 +462,7 @@
     .catalogo__data.data-thumb .card-data__cover{
         height: 300px;
     }
-    .data-thumb .card-data__body__details__format .format{
+    .data-thumb:not(.card-data--body-overlap) .card-data__body__details__format .format{
         top: 270px;
     }
     .card-data__features img{
@@ -540,7 +540,7 @@
     .catalogo__data.data-thumb .card-data__cover {
         height: 390px;
     }
-    .data-thumb .card-data__body__details__format .format {
+    .data-thumb:not(.card-data--body-overlap) .card-data__body__details__format .format {
         top: 360px;
     }
     .data-thumb .card-data__body, .data-list .card-data__body{
