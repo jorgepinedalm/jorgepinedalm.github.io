@@ -44,6 +44,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700|Roboto+Condensed:wght@400;700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 	<link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="convocatorias.css"/>
     
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -989,6 +990,68 @@
             </div>
         </div>
     </section>
+    <section id="logos">
+        <div class="logos">
+            
+            <div class="logos__logo">
+                <img src="logos/24Symbols.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Amazon-Logo.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Apple.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Bibliotechnia.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Bookwire.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Casa del libro.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Digitalia.jpg" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Ebook Patagonia.jpg" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/ebook-7-24.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Ebsco.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Google Books.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Jstor.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Odilo.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Perlego.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Project Muse.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Publica.la.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Vital Source 2.jpg" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Vital-Source.png" alt="..."/>
+            </div>
+            <div class="logos__logo">
+                <img src="logos/Vlex.png" alt="..."/>
+            </div>
+        </div>
+    </section>
     <section id="adicional" class="py-4">
         <div class="container">
             <div class="row">
@@ -1172,7 +1235,7 @@
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script>
         $(document).ready(function(){
-          $('.bxslider').bxSlider({
+            $('.bxslider').bxSlider({
                 auto: true,
                 autoControls: true,
                 adaptiveHeight: true,
@@ -1182,6 +1245,23 @@
                 maxSlides: 5,
                 moveSlides: 1,
                 slideWidth: 200,
+                autoHover: true,
+                nextText: "Siguiente",
+                prevText: "Anterior",
+                startText: "Iniciar",
+                stopText: "Detener"
+            });
+            $('.logos').bxSlider({
+                auto: true,
+                autoControls: true,
+                adaptiveHeight: true,
+                speed: 500,
+                slideSelector: 'div.logos__logo',
+                minSlides: 1,
+                maxSlides: 5,
+                moveSlides: 1,
+                slideWidth: 200,
+                slideMargin: 8,
                 autoHover: true,
                 nextText: "Siguiente",
                 prevText: "Anterior",
