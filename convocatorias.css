@@ -45,6 +45,11 @@
 .convocatorias__convocatoria__body {
     flex-grow: 2;
     margin-bottom: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+.convocatorias__convocatoria__body__content{
+    flex-grow: 2;
 }
 
 .convocatorias__convocatoria__body__title{
@@ -106,6 +111,31 @@
 @media only screen and (min-width: 768px){
     .convocatorias.thumb .convocatorias__convocatoria{
         width: calc(100% / 2);
+    }
+    .convocatorias.list .convocatorias__convocatoria{
+        flex-direction: row;
+    }
+    .convocatorias.list .convocatorias__convocatoria__top {
+        height: 200px;
+        width: 270px;
+        min-width: 270px;
+        margin: 0;
+    }
+    .convocatorias.list .convocatorias__convocatoria__body__state{
+        border-radius: 10px;
+        position: static;
+    }
+    .convocatorias.list .convocatorias__convocatoria__body{
+        padding: .5rem 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .convocatorias.list .convocatorias__convocatoria__body__content{
+        flex-grow: 2;
+    }
+    .convocatorias.list .convocatorias__convocatoria:not(:last-child){
+        border-right: 0;
+        border-bottom: 1px solid #eeeeee;
     }
 }
 @media only screen and (min-width: 1024px) {
