@@ -8,6 +8,9 @@
     clip: rect(0,0,0,0);
     border: 0;
 }
+#header-um .nav-bar nav>ul>li>a, footer a{
+    text-decoration: none;
+}
 .breadcrumb {
     background-color: #f8f9fa;
     padding: .25rem .5rem;
@@ -28,6 +31,19 @@
     font-size: 2rem;
     color: #003a6b;
     margin-bottom: .5rem;
+}
+.page__title.border-title{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.page__title.border-title:before {
+    position: absolute;
+    content: "";
+    width: 18vw;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid #c08e2d;
 }
 .page__headings{
     display: flex;
