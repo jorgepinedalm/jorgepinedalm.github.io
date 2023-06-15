@@ -1,0 +1,223 @@
+.convocatoria__top{
+    padding: 1rem;
+    background-color: #f8f9fa;
+    margin-bottom: 1rem;
+    box-shadow: inset 0px .125rem 1.25rem -8px rgba(0,0,0,.15)!important;
+}
+.convocatoria__highlight{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.convocatoria__image{
+    width: calc(360px + .5rem);
+    height: calc(260px + .225rem);
+    min-width: calc(360px + .25rem);
+    border-radius: 5px;
+    background-color: white;
+    padding: .25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+    margin-bottom: 1rem;
+}
+.convocatoria__image__inner{
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.convocatoria__image__inner img{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.convocatoria__image__overlap{
+    display: none;
+    transition: all .35s ease-in-out;
+}
+.convocatoria__image__inner:hover .convocatoria__image__overlap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+    cursor: pointer;
+}
+.convocatoria__image__overlap__icon{
+    font-size: 2rem;
+}
+.convocatoria__info__title{
+    font-family: 'Intro', sans-serif;
+    font-size: 1.875rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+.convocatoria__main-button-wrapper{
+    text-align: right;
+}
+.convocatoria__main-button-wrapper__button, .button-token {
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border: 0;
+    border-radius: 8px;
+    font-family: 'Intro', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+    text-align: center;
+}
+.convocatoria__main-button-wrapper__button:hover, .button-token:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.convocatoria__main-button-wrapper a:not(:last-child){
+    margin-right: .5rem;
+}
+.convocatoria__enroll-button, .button-token, .convocatoria__enroll-button:hover{
+    background: green;
+    color: white;
+}
+.convocatoria__state-button{
+    background-color: white;
+    color:#333;
+}
+.convocatoria__content h3 {
+    font-family: 'Intro', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.convocatoria__content p a{
+    max-width: 100vh;
+    overflow: hidden;
+    display: block;
+    width: auto;
+}
+.convocatoria__detail__icon{
+    font-size: 1.5rem;
+}
+.convocatoria__info__details label{
+    font-size: .875rem;
+    color: #333;
+    font-weight: 700;
+    line-height: 1.1;
+    display: block;
+}
+.convocatoria__info__details p{
+    margin: 0;
+}
+.convocatoria__info__details{
+    padding: .5rem 1rem;
+    border-radius: 8px;
+    background: white;
+    margin-bottom: 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+}
+.convocatoria__info__details .convocatoria__details__detail{
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+.convocatoria__detail__icon{
+    display: inline-block;
+    padding-right: .5rem;
+}
+.convocatoria__link-access{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: white;
+    padding: 0 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+    margin-bottom: 1rem;
+}
+.convocatoria__link-access a{
+    text-align: center;
+    text-decoration: none;
+    padding: .5rem;
+    font-family: 'Intro', sans-serif;
+    font-weight: bold;
+    color: #003a6b;
+    transition: all .35s ease-in-out;
+}
+.convocatoria__link-access a:hover{
+    background-color: #003a6b;
+    color: white;
+}
+.cards .card-header{
+    background-color: #004a87;
+    color: white;
+    font-family: 'Intro', sans-serif;
+    font-weight: 700;
+}
+#documentosGenerales a{
+    text-decoration: none;
+}
+#consultaPostulacion{
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    box-shadow: inset 0px .125rem 1.25rem rgba(0,0,0,.15)!important;
+    text-align: center;
+}
+#consultaPostulacion h3{
+    font-family: 'Intro', sans-serif;
+    font-size: 1.5rem;
+}
+#inputToken{
+    border-radius: .375rem;
+}
+
+@media only screen and (min-width: 768px){
+    .convocatoria__info__details{
+        display: flex;
+    }
+    .convocatoria__info__details .convocatoria__details__detail{
+        margin-bottom: 0;
+    }
+    
+    .convocatoria__info__details div:not(:last-child) {
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+    .convocatoria__info__details .convocatoria__details__detail:not(:last-child){
+        border-right: 1px solid #eee;
+        padding-right: 1rem;
+    }
+    
+    .convocatoria__link-access{
+        display: inline-flex;
+        flex-direction: row;
+        width: auto;
+    }
+    .convocatoria__link-access a:not(:last-child){
+        border-right: 1px solid #eee;
+    }
+    .convocatoria__content p a{
+        display: inline-block;
+    }
+    .convocatoria__info{
+        padding: 0 1rem;
+    }
+    .convocatoria__main-button-wrapper__button {
+        width: auto;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .convocatoria__highlight{
+        flex-direction: row;
+    }
+    .convocatoria__image{
+        margin-bottom: 0;
+    }
+}
