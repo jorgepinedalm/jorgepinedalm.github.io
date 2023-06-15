@@ -224,7 +224,133 @@
         </div>
         <div class="convocatoria__form">
             <div class="container py-3">
-                <h3>Formulario de postulación</h3>
+                <h3 class="convocatoria__form__title">Formulario de postulación</h3>
+                <form>
+                    
+                    <div class="row">
+                        <div class="col-xl-7">
+                            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                                <span class="bi bi-info-circle flex-shrink-0 me-2" aria-hidden="true"></span>
+                                <div>
+                                    Ingrese el tipo y el documento y presione en buscar. <strong>Todos los campos son obligatorios</strong>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="inputTipoDoc" class="form-label">Tipo de documento</label>
+                                        <select class="form-select" id="inputTipoDoc" required>
+                                            <option selected disabled>Seleccione un tipo</option>
+                                            <option value="CC">Cédula de ciudadanía</option>
+                                            <option value="CE">Cédula de extranjería</option>
+                                            <option value="PAS">Pasaporte</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="inputNumDocumento" class="form-label">Número de documento</label>
+                                        <input type="text" class="form-control" id="inputNumDocumento" placeholder="Ingrese el número de documento" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 d-flex align-items-end mb-3">
+                                    <button type="button" class="btn btn-success w-100 rounded py-2" title="Consultar identificación">
+                                        <span class="bi bi-search" aria-hidden="true"></span>
+                                        <span class="d-inline-block d-xl-none">Consultar</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="inputTipoVinculacion" class="form-label">Tipos de vinculación con la Universidad</label>
+                                        <select class="form-select" id="inputTipoVinculacion" required disabled>
+                                            <option selected disabled>Seleccione un tipo de vinculación</option>
+                                            <option value="Docente">Docente</option>
+                                            <option value="Egresado">Egresado</option>
+                                            <option value="Adminsitrativo">Adminsitrativo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="inputTipoVinculacion" class="form-label">Facultad (Si aplica)</label>
+                                        <select class="form-select" id="inputTipoVinculacion" required disabled>
+                                            <option selected disabled>Seleccione una facultad</option>
+                                            <option value="Docente">Docente</option>
+                                            <option value="Egresado">Egresado</option>
+                                            <option value="Adminsitrativo">Adminsitrativo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label for="inputNombres" class="form-label">Nombres</label>
+                                        <input type="text" class="form-control" id="inputNombres" placeholder="Ingrese el o los nombres de la persona. Máx. 150 caracteres" maxlength="150" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="inputTelefono" class="form-label">Teléfono</label>
+                                        <input type="tel" class="form-control" id="inputTelefono" placeholder="Ingrese el numero teléfonico" maxlength="12" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="mb-3">
+                                        <label for="inputEmail" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="Ej: usuario@correo.com" maxlength="150" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5">
+                            <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                <span class="bi bi-exclamation-triangle flex-shrink-0 me-2" aria-hidden="true"></span>
+                                <div>
+                                    Haga clic en el icono para cargar un documento. <strong>Los documentos resaltados son de carracter obligatorio</strong></strong>
+                                </div>
+                            </div>
+                            <div class="card mb-3" id="documentosSolicitados">
+                                <div class="card-header">
+                                    Documentos solicitados
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">	
+                                        <span class="bi bi-file-earmark-arrow-up icon-upload"></span> 
+                                        <span>
+                                            Formulario de inscripción
+                                            <strong class="d-block"><small>Archivo pendiente</small></strong>
+                                        </span>                            
+                                    </li>
+                                    <li class="list-group-item">	
+                                        <span class="bi bi-file-earmark-arrow-up icon-upload"></span> 
+                                        <span>
+                                            Texto completo del artículo en Word
+                                            <strong class="d-block"><small>Archivo pendiente</small></strong>
+                                        </span>                            
+                                    </li>
+                                    <li class="list-group-item">	
+                                        <span class="bi bi-file-earmark-arrow-up icon-upload"></span> 
+                                        <span>
+                                            Documentos que evidencien el cumplimiento de todos los requisitos
+                                            <strong class="d-block"><small>Archivo pendiente</small></strong>
+                                        </span>                             
+                                    </li>
+                                    <li class="list-group-item">	
+                                        <span class="bi bi-file-earmark-arrow-up icon-upload"></span> 
+                                        <span>
+                                            Para el apoyo al pago de APC se debe entregar la carta o comunicación oficial de aceptación para publicación del artículo y el documento en el que se especifique el costo de publicación
+                                            <strong class="d-block"><small>Archivo pendiente</small></strong>
+                                        </span>                             
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="button-enviar w-auto">Enviar postulación</button>
+                    </div>
+                </form>
             </div>
         </div>
         

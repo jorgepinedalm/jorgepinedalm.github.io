@@ -64,7 +64,7 @@
 .convocatoria__main-button-wrapper{
     text-align: right;
 }
-.convocatoria__main-button-wrapper__button, .button-token {
+.convocatoria__main-button-wrapper__button, .button-token, .button-enviar {
     width: 100%;
     display: inline-block;
     text-decoration: none;
@@ -83,7 +83,7 @@
 .convocatoria__main-button-wrapper a:not(:last-child){
     margin-right: .5rem;
 }
-.convocatoria__enroll-button, .button-token, .convocatoria__enroll-button:hover{
+.convocatoria__enroll-button, .button-token, .button-enviar, .convocatoria__enroll-button:hover{
     background: green;
     color: white;
 }
@@ -155,7 +155,7 @@
     background-color: #003a6b;
     color: white;
 }
-.cards .card-header{
+.cards .card-header, #documentosSolicitados .card-header{
     background-color: #004a87;
     color: white;
     font-family: 'Intro', sans-serif;
@@ -176,6 +176,41 @@
 }
 #inputToken{
     border-radius: .375rem;
+}
+.convocatoria__form__title{
+    position: relative;
+    font-family: 'Intro', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #003a6b;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.convocatoria__form__title:before {
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 0;
+    bottom: 0;
+    left: calc(50% - 60px);
+    border-bottom: 2px solid #c08e2d;
+}
+
+.convocatoria__form .form-control, .convocatoria__form .form-select{
+    border-radius: 8px;
+    padding: .5rem .75rem;
+}
+#documentosSolicitados .list-group-item{
+    display: flex;
+    align-items: center;
+}
+#documentosSolicitados .list-group-item .icon-upload{
+    font-size: 2rem;
+    color: #003a6b;
+    margin-right: .5rem;
+}
+#documentosSolicitados .list-group-item strong{
+    color:red;
 }
 
 @media only screen and (min-width: 768px){
