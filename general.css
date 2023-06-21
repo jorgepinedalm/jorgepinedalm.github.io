@@ -125,6 +125,11 @@
     border: 2px solid #003a6b;
     color: #003a6b;
 }
+.button.button-success{
+    background-color: green;
+    color: white;
+    border: 0;
+}
 .page__pagination__top .page-link{
     color: #003a6b;
     border-color: #ced4da;
@@ -151,11 +156,18 @@
 .button-view.active:hover{
     box-shadow: inset 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
+.forms .form-control, .forms .form-select{
+    border-radius: 8px;
+    padding: .5rem .75rem;
+}
 @media only screen and (min-width: 768px) {
     .page__title{
         text-align: left;
         font-size: 2.5rem;
         margin-bottom: 0;
+    }
+    h3.page__title{
+        font-size: 2rem!important;
     }
     .page__headings{
         flex-wrap: nowrap;
