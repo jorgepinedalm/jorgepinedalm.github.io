@@ -58,6 +58,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="catalogo.css" />
+    <link rel="stylesheet" href="convocatorias.css" />
+    <link rel="stylesheet" href="divulgacion.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.4.1/rzslider.min.css" rel="stylesheet"
         type="text/css" />
 
@@ -205,209 +207,153 @@
                     <li class="breadcrumb-item active" aria-current="page">Divulgación</li>
                 </ol>
             </nav>
-            <div class="catalogo__headings">
+            <div class="catalogo__headings mb-3">
                 <h2 class="catalogo__title">Divulgación</h2>
                 <div class="catalogo__filters">
                     <div class="catalogo__filters__general">
                         <div class="field-search form-floating">
                             <input type="search" class="form-control" id="fieldGeneral"
                                 placeholder="Ingrese la búsqueda" maxlength="255">
-                            <label for="fieldGeneral">Buscar por título, autor o ISBN</label>
-                        </div>
-                        <button class="button-filters" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters"
-                            title="Búsqueda avanzada">
-                            <span class="bi bi-funnel-fill" aria-hidden="true"></span>
-                            <span class="visually-hidden">Búsqueda avanzada</span>
-                        </button>
-
-                    </div>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFilters"
-                        aria-labelledby="offcanvasFiltersLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasFiltersLabel">Filtrar búsqueda</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                aria-label="Cerrar"></button>
-                        </div>
-                        <div class="offcanvas-body pt-0">
-                            <small class="d-block text-center mb-2">Los filtros seleccionados a continuación se aplicaran automáticamente en la búsqueda</small>
-                            <div class="catalogo__filters__custom__fields">
-                                <div class="field-format">
-                                    <div class="form-floating mb-3">
-                                        <select class="form-select" id="fieldFormat" aria-label="0000">
-                                            <option selected disabled>Seleccione un formato</option>
-                                            <option value="1">Impreso</option>
-                                            <option value="2">eBook</option>
-                                        </select>
-                                        <label for="fieldFormat">Formato</label>
-                                    </div>
-                                </div>
-                                <div class="field-edition-year">
-                                    <label for="editionYear" class="form-label">Año de edición</label>
-                                    <div class="row g-1">
-                                        <div class="col-6">
-                                            <div class="form-floating mb-3">
-                                                <select class="form-select" id="fieldInitialYear" aria-label="0000">
-                                                    <option selected disabled>Seleccione un año</option>
-                                                    <option value="1">2001</option>
-                                                    <option value="2">2002</option>
-                                                    <option value="3">2003</option>
-                                                </select>
-                                                <label for="fieldInitialYear">Año inicial</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-floating mb-3">
-                                                <select class="form-select" id="fieldFinalYear" aria-label="0000">
-                                                    <option selected disabled>Seleccione un año</option>
-                                                    <option value="1">2001</option>
-                                                    <option value="2">2002</option>
-                                                    <option value="3">2003</option>
-                                                </select>
-                                                <label for="fieldFinalYear">Año final</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="accordion mb-3" id="accordionTopics">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse1"
-                                                aria-expanded="true" aria-controls="collapse1">
-                                                Ciencias médicas y de salud <span
-                                                    class="badge text-bg-primary" title="19 resultados">19<span
-                                                        class="visually-hidden"> resultados</span></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse1" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionTopics">
-                                            <div class="accordion-body">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="subtopic1">
-                                                    <label class="form-check-label" for="subtopic1">
-                                                        Enfermería <span
-                                                        class="badge text-bg-secondary" title="6 resultados">6<span
-                                                            class="visually-hidden"> resultados</span></span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="subtopic2" checked>
-                                                    <label class="form-check-label" for="subtopic2">
-                                                        Medicina <span
-                                                        class="badge text-bg-secondary" title="11 resultados">11<span
-                                                            class="visually-hidden"> resultados</span></span>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="subtopic3" checked>
-                                                    <label class="form-check-label" for="subtopic3">
-                                                        Odontología <span
-                                                        class="badge text-bg-secondary" title="2 resultados">2<span
-                                                            class="visually-hidden"> resultados</span></span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse2"
-                                                aria-expanded="false" aria-controls="collapse2">
-                                                Ciencias Naturales <span class="badge text-bg-primary" title="27 resultados">27<span
-                                                        class="visually-hidden"> resultados</span></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse2" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionTopics">
-                                            <div class="accordion-body">
-                                                ...
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse3"
-                                                aria-expanded="false" aria-controls="collapse3">
-                                                Ciencias Sociales <span class="badge text-bg-primary" title="103 resultados">103<span
-                                                        class="visually-hidden"> resultados</span></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse3" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionTopics">
-                                            <div class="accordion-body">
-                                                ...
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse4"
-                                                aria-expanded="false" aria-controls="collapse4">
-                                                Ciencias Agrarias <span class="badge text-bg-primary" title="20 resultados">20<span
-                                                        class="visually-hidden"> resultados</span></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse4" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionTopics">
-                                            <div class="accordion-body">
-                                                ...
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse5"
-                                                aria-expanded="false" aria-controls="collapse5">
-                                                Humanidades y artes <span class="badge text-bg-primary" title="99 resultados">99<span
-                                                        class="visually-hidden"> resultados</span></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse5" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionTopics">
-                                            <div class="accordion-body">
-                                                ...
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse6"
-                                                aria-expanded="false" aria-controls="collapse6">
-                                                Ingeniería y tecnología <span
-                                                    class="badge text-bg-primary" title="23 resultados">23<span
-                                                        class="visually-hidden"> resultados</span></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse6" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionTopics">
-                                            <div class="accordion-body">
-                                                ...
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <button type="button" class="button-clear-filter">
-                                        <span class="bi bi-x-circle" aria-hidden="true"></span> Limpiar filtros
-                                    </button>
-                                </div>
-                            </div>
+                            <label for="fieldGeneral">Buscar</label>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="divulgacion__types">
+                <button type="button" class="divulgacion__types__type">
+                    <img src="/editorial/icons/newspaper-circle.png" alt="icono de noticias">
+                    Noticias
+                </button>
+                <button type="button" class="divulgacion__types__type active">
+                    <img src="/editorial/icons/calendar.png" alt="icono de eventos">
+                    Eventos
+                </button>
+                <button type="button" class="divulgacion__types__type">
+                    <img src="/editorial/icons/rocket-launch.png" alt="icono de lanzamientos">
+                    Lanzamientos
+                </button>
+                <button type="button" class="divulgacion__types__type">
+                    <img src="/editorial/icons/microphone.png" alt="icono de lanzamientos">
+                    Podcasts
+                </button>
+            </div>
         </div>
     </div>
+    <section id="convocatorias">
+        <div class="container">
+            <div class="convocatorias thumb">
+                <div class="convocatorias__convocatoria open">
+                    <div class="convocatorias__convocatoria__top">
+                        <img src="https://editorial.unimagdalena.edu.co/Content/ArchivosPublicaciones/Publicacion_1085/multimedia_2_20220819103343.541.png" alt="portada de Convocatoria">
+                    </div>
+                    <div class="convocatorias__convocatoria__body">
+                        <div class="convocatorias__convocatoria__body__content">
+                            <h3 class="convocatorias__convocatoria__body__title"><a href="#">Jornadas de divulgación científica | 25.08.2022</a></h3>
+                            <span class="convocatorias__convocatoria__body__state closed"><strong>Evento</strong></span>
+                            <span class="convocatorias__convocatoria__body__date">Fecha de publicación: 24/11/2023</span>    
+                        </div>
+                        <div class="convocatorias__convocatoria__bottom">
+                            <a role="button" href="/editorial/detalle-convocatoria.html" class="convocatorias__convocatoria__bottom__button button__more">Ver más<span class="visually-hidden"> acerca de TITULO NOTICIA</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="convocatorias__convocatoria open">
+                    <div class="convocatorias__convocatoria__top">
+                        <img src="https://editorial.unimagdalena.edu.co/Content/ArchivosPublicaciones/Publicacion_1084/multimedia_2_20220726115352.959.png" alt="portada de Noticia">
+                    </div>
+                    <div class="convocatorias__convocatoria__body">
+                        <div class="convocatorias__convocatoria__body__content">
+                            <h3 class="convocatorias__convocatoria__body__title"><a href="#">9na Convocatoria para financiar la publicación de libros con la Editorial Unimagdalena</a></h3>
+                            <span class="convocatorias__convocatoria__body__state open"><strong>Noticia</strong></span>
+                            <span class="convocatorias__convocatoria__body__date">Fecha de publicación: 15/05/2023</span>    
+                        </div>
+                        <div class="convocatorias__convocatoria__bottom">
+                            <a role="button" href="/editorial/detalle-convocatoria.html" class="convocatorias__convocatoria__bottom__button button__more">Ver más<span class="visually-hidden"> acerca de TITULO NOTICIA</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="convocatorias__convocatoria open">
+                    <div class="convocatorias__convocatoria__top">
+                        <img src="https://editorial.unimagdalena.edu.co/Content/ArchivosPublicaciones/Publicacion_1083/multimedia_2_20220603094252.092.png" alt="portada de Noticia">
+                    </div>
+                    <div class="convocatorias__convocatoria__body">
+                        <div class="convocatorias__convocatoria__body__content">
+                            <h3 class="convocatorias__convocatoria__body__title"><a href="#">Jornadas de divulgación científica | 16.06.2022</a></h3>
+                            <span class="convocatorias__convocatoria__body__state closed"><strong>Evento</strong></span>
+                            <span class="convocatorias__convocatoria__body__date">Fecha de publicación: 25/11/2022</span>    
+                        </div>
+                        <div class="convocatorias__convocatoria__bottom">
+                            <a role="button" href="/editorial/detalle-convocatoria.html" class="convocatorias__convocatoria__bottom__button button__more">Ver más<span class="visually-hidden"> acerca de TITULO NOTICIA</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="convocatorias__convocatoria open">
+                    <div class="convocatorias__convocatoria__top">
+                        <img src="https://editorial.unimagdalena.edu.co/Content/ArchivosPublicaciones/Publicacion_71/multimedia_2_20210519142629.107.png" alt="portada de Noticia">
+                    </div>
+                    <div class="convocatorias__convocatoria__body">
+                        <div class="convocatorias__convocatoria__body__content">
+                            <h3 class="convocatorias__convocatoria__body__title"><a href="#">Concurso #AulaAbierta Unimagdalena: ExpresArte y MovilizArte. Caricatura – Poesía – Cuento Breve - Collage</a></h3>
+                            <span class="convocatorias__convocatoria__body__state closed"><strong>Evento</strong></span>
+                            <span class="convocatorias__convocatoria__body__date">Fecha de publicación: 24/11/2022</span>    
+                        </div>
+                        <div class="convocatorias__convocatoria__bottom">
+                            <a role="button" href="/editorial/detalle-convocatoria.html" class="convocatorias__convocatoria__bottom__button button__more">Ver más<span class="visually-hidden"> acerca de TITULO NOTICIA</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="convocatorias__convocatoria open">
+                    <div class="convocatorias__convocatoria__top">
+                        <img src="https://editorial.unimagdalena.edu.co/Content/ArchivosPublicaciones/Publicacion_72/multimedia_2_20210707110002.498.png" alt="portada de Noticia">
+                    </div>
+                    <div class="convocatorias__convocatoria__body">
+                        <div class="convocatorias__convocatoria__body__content">
+                            <h3 class="convocatorias__convocatoria__body__title"><a href="#">Coloquio "Macondo: La memoria del olvido, arte, literatura y cultura" / 8 y 9 de julio de 2021</a></h3>
+                            <span class="convocatorias__convocatoria__body__state open"><strong>Noticia</strong></span>
+                            <span class="convocatorias__convocatoria__body__date">Fecha de publicación: 23/11/2022</span>    
+                        </div>
+                        <div class="convocatorias__convocatoria__bottom">
+                            <a role="button" href="#" class="convocatorias__convocatoria__bottom__button button__more">Ver más<span class="visually-hidden"> acerca de TITULO NOTICIA</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="convocatorias__convocatoria open">
+                    <div class="convocatorias__convocatoria__top">
+                        <img src="https://editorial.unimagdalena.edu.co/Content/ArchivosPublicaciones/Publicacion_65/multimedia_2_20200724132711.326.png" alt="portada de Noticia">
+                    </div>
+                    <div class="convocatorias__convocatoria__body">
+                        <div class="convocatorias__convocatoria__body__content">
+                            <h3 class="convocatorias__convocatoria__body__title"><a href="#">Presentación del libro: Viaje a la Sierra Nevada de Santa Marta | 29 de julio de 2020 | 5:00 P.M. | A través de ► Facebook LIVE1</a></h3>
+                            <span class="convocatorias__convocatoria__body__state lanzamiento"><strong>Lanzamiento</strong></span>
+                            <span class="convocatorias__convocatoria__body__date">Fecha de publicación: 23/11/2022</span>    
+                        </div>
+                        <div class="convocatorias__convocatoria__bottom">
+                            <a role="button" href="#" class="convocatorias__convocatoria__bottom__button button__more">Ver más<span class="visually-hidden"> acerca de TITULO NOTICIA</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="page__pagination__top">
+                    <ul class="pagination justify-content-center mb-2 mb-sm-0">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Anterior">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Siguiente">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Versión 2.3 07/07/2021 Editado por: Jorge Luis Pineda Montagut / CIDS -->
